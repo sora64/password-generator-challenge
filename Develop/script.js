@@ -16,7 +16,8 @@ var writePassword = function() {
   // generates the length of the password based on user input
   var generatePassword = parseInt(window.prompt("Please input how long you would like your password to be between 8 and 128 characters."));
   if (!generatePassword || generatePassword < 8 || generatePassword > 128) {
-    generatePassword = parseInt(window.prompt("Length must be between 8-128 characters. Please try again."));
+    generatePassword = parseInt(window.alert("Length must be between 8-128 characters. Please try again."));
+    writePassword();
   } else {
     // checks if the user wants to use lowercase letters
     lowerCaseCF = window.confirm("Would you like your password to contain lowercase letters?");
@@ -51,6 +52,7 @@ var writePassword = function() {
   if (!lowerCaseCF && !upperCaseCF && !numeralsCF && !specialCharsCF) {
     // "confirmations" keeps track of character type arrays to concatenate based on user input
     var confirmations = window.alert("Please select at least one character type for your password.");
+    writePassword();
   // if all character types are selected
   } else if (lowerCaseCF && upperCaseCF && numeralsCF && specialCharsCF) {
     confirmations = lcChars.concat(ucChars, numChars, specChars);
