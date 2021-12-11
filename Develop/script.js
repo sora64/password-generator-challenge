@@ -91,7 +91,7 @@ var writePassword = function() {
   };
   
   // this empty array will be filled by user input
-  var pwArray = [];
+  const pwArray = [];
 
   for (var i = 0; i < generatePassword; i++) {
     var chooseConfirms = confirmations[Math.floor(Math.random() * confirmations.length)];
@@ -102,8 +102,6 @@ var writePassword = function() {
     document.querySelector("#password").textContent = password;
   }
   
-  passwordText();
-
   var password = pwArray.join("");
   passwordText(password);
   return password;
