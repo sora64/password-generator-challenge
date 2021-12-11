@@ -22,7 +22,6 @@ var getCharType = function() {
     window.alert("Uppercase letters will be included.");
   }
 
-  
   var numerals = window.confirm("Would you like your password to contain numerals?");
   if (numerals) {
     window.alert("Numerals will be included.")
