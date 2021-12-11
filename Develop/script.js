@@ -13,7 +13,6 @@ generateBtn.addEventListener("click", function() {
   document.querySelector("#password").placeholder = password; 
 });
 
-
 var writePassword = function() {
   var generatePassword = parseInt(window.prompt("Please input how long you would like your password to be between 8 and 128 characters."));
   if (!generatePassword || generatePassword < 8 || generatePassword > 128) {
