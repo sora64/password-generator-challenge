@@ -89,8 +89,8 @@ var writePassword = function() {
     confirmations = specChars;
   };
   
-  // this empty array will be filled by user input
-  const pwArray = [];
+  // this empty array will be filled by joining pushed data from the random generator below
+  var pwArray = [];
 
   for (var i = 0; i < generatePassword; i++) {
     var chooseConfirms = confirmations[Math.floor(Math.random() * confirmations.length)];
