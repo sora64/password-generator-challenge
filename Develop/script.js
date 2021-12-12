@@ -99,7 +99,7 @@ var writePassword = function() {
   var passwordText = function(password) {
     document.querySelector("#password").textContent = password;
   }
-  // takes what was output by the randomizer and joins it all together into the empty array, "pwArray"
+  // takes what was output by the randomizer and joins it all together into the empty array, "pwArray"; I credit https://github.com/jamierachael for this syntax, and https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join as well as https://www.w3schools.com/jsref/jsref_join.asp for the explanation
   var password = pwArray.join("");
   passwordText(password);
   return password;
