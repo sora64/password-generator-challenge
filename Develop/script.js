@@ -16,16 +16,16 @@ function generatePassword() {
     // checks if the user wants to use lowercase letters
     lowerCaseCF = confirm("Would you like your password to contain lowercase letters?");
     if (lowerCaseCF) {
-      alert("Lower case letters will be used.")
+      alert("Lowercase letters will be used.")
     } else {
-      alert("Lower case letters will not be used.")
+      alert("Lowercase letters will not be used.")
     }
     // checks if the user wants to use uppercase letters
     upperCaseCF = confirm("Would you like your password to contain uppercase letters?");
     if (upperCaseCF) {
-      alert("Upper case letters will be used.")
+      alert("Uppercase letters will be used.")
     } else {
-      alert("Upper case letters will not be used.")
+      alert("Uppercase letters will not be used.")
     }
     // checks if the user wants to use numerals
     numeralsCF = window.confirm("Would you like your password to contain numerals?");
