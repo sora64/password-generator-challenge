@@ -89,7 +89,6 @@ function generatePassword() {
     var chooseConfirms = confirmations[Math.floor(Math.random() * confirmations.length)];
     password.push(chooseConfirms);
   }
-  debugger;
   return password;
 }
 // function that writes the password
