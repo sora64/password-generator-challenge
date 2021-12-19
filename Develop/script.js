@@ -11,7 +11,7 @@ function generatePassword() {
   var pwLength = parseInt(prompt("Please input how long you would like your password to be between 8 and 128 characters."));
   if (!pwLength || pwLength < 8 || pwLength > 128) {
     alert("Length must be between 8-128 characters. Please try again.");
-    generatePassword();
+    location.reload();
   } else if (pwLength >= 8 || pwLength <=128) {
     // checks if the user wants to use lowercase letters
     lowerCaseCF = confirm("Would you like your password to contain lowercase letters?");
@@ -45,8 +45,8 @@ function generatePassword() {
   // if no character types are selected
   if (!lowerCaseCF && !upperCaseCF && !numeralsCF && !specialCharsCF) {
     // "confirmations" keeps track of character type arrays to concatenate based on user input
-    var confirmations = window.alert("Please select at least one character type for your password.");
-    generatePassword();
+    var confirmations = window.alert("You must select at least one character type for your password. Please try again.");
+    location.reload;
   // if all character types are selected
   } else if (lowerCaseCF && upperCaseCF && numeralsCF && specialCharsCF) {
     confirmations = lcChars.concat(ucChars, numChars, specChars);
@@ -84,11 +84,13 @@ function generatePassword() {
   }
   // this empty array will be filled by joining pushed data from the random generator below
   var password = [];
+
   // randomizer
   for (var i = 0; i < pwLength; i++) {
     var chooseConfirms = confirmations[Math.floor(Math.random() * confirmations.length)];
     password.push(chooseConfirms);
   }
+
   return password;
 }
 // function that writes the password
